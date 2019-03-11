@@ -1,0 +1,28 @@
+<h1>Joueurs</h1>
+<div class="row">
+  <table border="1">
+   <thead class="thead-dark">
+    <tr>
+    <th scope="col">Nom</th>
+    <th scope="col">Num</th>
+    <th scope="col">Present</th>
+    <th scope="col">Equipe_id</th>
+    <th scope="col">View</th>
+    <th scope="col">Edit</th>
+    </tr>
+</thead>
+<tbody>
+    {% for joueur in object_list %}
+    <tr>
+    <td>{{ joueur.nom }}</td>
+    <td>{{ joueur.num }}</td>
+    <td>{{ joueur.present }}</td>
+    <td>{{ joueur.equipe_id }}</td>
+    <td><a href="{% url "joueur_view" joueur.id %}">view</a></td>
+    <td><a href="{% url "joueur_edit" joueur.id %}">edit</a></td>
+    </tr>
+    {% endfor %}
+</tbody>
+</table>
+
+<a href="{% url "joueur_new" %}">New</a>

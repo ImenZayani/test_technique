@@ -1,0 +1,24 @@
+<h1>Equipes</h1>
+<div class="row">
+  <table border="1">
+   <thead class="thead-dark">
+    <tr>
+    <th scope="col">Nom</th>
+    <th scope="col">Drapeau</th>
+    <th scope="col">View</th>
+    <th scope="col">Edit</th>
+    </tr>
+</thead>
+<tbody>
+    {% for equipe in object_list %}
+    <tr>
+    <td>{{ equipe.nom }}</td>
+    <td>{{ equipe.drapeau }}</td>
+    <td><a href="{% url "equipe_view" equipe.id %}">view</a></td>
+    <td><a href="{% url "equipe_edit" equipe.id %}">edit</a></td>
+    </tr>
+    {% endfor %}
+</tbody>
+</table>
+
+<a href="{% url "equipe_new" %}">New</a>

@@ -59,7 +59,7 @@ ROOT_URLCONF = 'test_technique.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['C:/test_technique/mytest/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -126,13 +126,14 @@ STATIC_URL = '/static/'
 
 REST_FRAMEWORK = {
 
-  #'DEFAULT_PERMISSION_CLASSES': (
+ # 'DEFAULT_PERMISSION_CLASSES': (
    #     'rest_framework.permissions.IsAuthenticated',
-   # ),
+  #  ),
 
 
 
    # 'DEFAULT_AUTHENTICATION_CLASSES': (
-   #     'rest_framework_simplejwt.authentication.JWTAuthentication',
-   # )
+    #    'rest_framework_simplejwt.authentication.JWTAuthentication',
+  #  ),
+
 }

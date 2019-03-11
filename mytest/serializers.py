@@ -8,6 +8,7 @@ class EquipeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Equipe
         fields = ('id', 'nom', 'drapeau')
+            
 
 
 
